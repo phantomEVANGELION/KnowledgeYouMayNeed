@@ -60,3 +60,4 @@ const router = createRouter({
 
 // 导出路由实例（在main.js中使用）
 export default router
+// fix: trigger git update
