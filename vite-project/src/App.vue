@@ -7,6 +7,21 @@
 
 <script setup>
 import Navbar from './components/Navbar.vue'
+import { ref, provide } from 'vue'
+
+const theme = ref(localStorage.getItem('theme') || 'light')
+
+const toggleTheme = () => {
+  theme.value = theme.value === 'light' ? 'dark' : 'light'
+  document.documentElement.setAttribute('data-theme', theme.value)
+  localStorage.setItem('theme', theme.value)
+}
+
+document.documentElement.setAttribute('data-theme', theme.value)
+
+// 全局提供
+provide('theme', theme)
+provide('toggleTheme', toggleTheme)
 </script>
 
 <style>

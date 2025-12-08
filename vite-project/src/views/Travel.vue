@@ -3,49 +3,41 @@
     <h1>去看看外面的世界吧</h1>
 
     <div class="cards">
-      <RouterLink
-        v-for="item in articles"
-        :key="item.id"
-        :to="`/article/${item.id}`"
-        class="card"
-      >
-        <img :src="item.image" />
-        <h3>{{ item.title }}</h3>
-        <p class="desc">{{ item.description }}</p>
+
+      <!-- 京都 -->
+      <RouterLink to="/article/travel-1" class="card">
+        <img src="../assets/image/card/jindu.png" alt="京都红叶">
+        <h3>日本京都红叶季攻略</h3>
+        <p class="desc">
+          探索京都最美红叶观赏地，推荐最佳游览时间和交通方式，让秋季旅行更完美。
+        </p>
       </RouterLink>
+
+      <!-- 冰岛极光 -->
+      <RouterLink to="/article/travel-2" class="card">
+        <img src="../assets/image/card/ice1.png" alt="冰岛极光">
+        <h3>冰岛极光摄影技巧</h3>
+        <p class="desc">
+          专业摄影师分享冰岛极光拍摄经验，从设备选择到构图技巧，拍出震撼照片。
+        </p>
+      </RouterLink>
+
+      <!-- 威尼斯 -->
+      <RouterLink to="/article/travel-3" class="card">
+        <img src="../assets/image/card/vini.png" alt="威尼斯">
+        <h3>威尼斯深度游指南</h3>
+        <p class="desc">
+          避开人潮的秘密路线，带你游览最美威尼斯。
+        </p>
+      </RouterLink>
+
     </div>
   </div>
 </template>
 
 <script setup>
-const articles = [
-  {
-    id: 'travel-1',
-    title: '日本京都红叶季攻略',
-    image: '/images/kyoto.jpg',
-    description: '探索京都最美红叶观赏地，推荐最佳游览时间和交通方式，让秋季旅行更完美。',
-  },
-  {
-    id: 'travel-2',
-    title: '冰岛极光摄影技巧',
-    image: '/images/iceland.jpg',
-    description: '专业摄影师分享冰岛极光拍摄经验，从设备选择到构图技巧，拍出震撼照片。',
-  },
-  {
-    id: 'travel-3',
-    title: '威尼斯水平深度游指南',
-    image: '/images/venice.jpg',
-    description: '避开人潮的秘密路线，推荐6条本地人才知道的小巷和隐藏景点。',
-  },
-  {
-    id: 'travel-4',
-    title: '清迈泼水节全攻略',
-    image: '/images/chiangmai.jpg',
-    description: '详解清迈宋干节的历史渊源、狂欢路线、装备清单和安全须知。',
-  }
-]
+// 不需要任何 JS 了
 </script>
-
 
 <style scoped>
 .page-container {

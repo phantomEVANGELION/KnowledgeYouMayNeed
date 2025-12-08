@@ -3,6 +3,7 @@
     <div class="nav-content">
       <div class="nav-title"><span class="main-text">LIGHT</span><span class="sub-text">DIET</span></div>
       <div class="nav-links">
+          <RouterLink to="/" class="nav-link">首页</RouterLink>
         <a href="#home" class="nav-link">轻食主义</a>
         <a href="#ingredients" class="nav-link">超级食物</a>
         <a href="#benefits" class="nav-link">健康益处</a>
@@ -12,7 +13,7 @@
   </nav>
 
   <div id="home" class="hero-section">
-    <img src="../../assets/image/cook/cook-3/salad_bg.jpg" alt="沙拉背景" class="hero-bg">
+    <img src="../../assets/image/cook/cook-3/bg.png" alt="沙拉背景" class="hero-bg">
     <div class="hero-text">
       <h1>地中海的馈赠</h1>
       <p>藜麦与彩蔬的碰撞，不仅仅是一道沙拉，更是夏日减脂期的完美能量碗。</p>

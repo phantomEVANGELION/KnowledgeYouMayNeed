@@ -7,6 +7,7 @@
         </div>
 
         <div class="nav-links">
+            <RouterLink to="/" class="nav-link">首页</RouterLink>
             <a href="#home" class="nav-link">深渊入口</a>
             <a href="#anatomy" class="nav-link">生理构造</a>
             <a href="#biolum" class="nav-link">光之伪装</a>
@@ -21,7 +22,7 @@
     </nav>
 
     <div id="home" class="hero-section">
-    <img src="../../assets/image/animal/animal-3/hatchetBegin.jpg" alt="深海背景" class="hero-bg">
+    <img src="../../assets/image/animal/animal-3/cemian.png" alt="深海背景" class="hero-bg">
     
     <div class="hero-text">
         <h1>深海幽灵</h1>
@@ -36,9 +37,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <div class="card-img-container">
-                            <img src="../../assets/image/animal/animal-3/body_shape.png" alt="斧状身躯" class="card-img">
-                        </div>
+                       
                         <h3 class="card-title">银色斧刃</h3>
                         <p class="card-desc">独特的 “压缩体型”</p>
                     </div>
@@ -54,9 +53,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <div class="card-img-container">
-                            <img src="../../assets/image/animal/animal-3/eyes.png" alt="管状眼睛" class="card-img">
-                        </div>
+                        
                         <h3 class="card-title">管状巨眼</h3>
                         <p class="card-desc">向上凝视的 “微光雷达”</p>
                     </div>
@@ -72,9 +69,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <div class="card-img-container">
-                            <img src="../../assets/image/animal/animal-3/photophores.png" alt="发光器" class="card-img">
-                        </div>
+                        
                         <h3 class="card-title">腹部光阵</h3>
                         <p class="card-desc">高科技的 “隐身斗篷”</p>
                     </div>
@@ -90,9 +85,7 @@
              <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <div class="card-img-container">
-                            <img src="../../assets/image/animal/animal-3/deep_sea.png" alt="垂直洄游" class="card-img">
-                        </div>
+                       
                         <h3 class="card-title">垂直洄游</h3>
                         <p class="card-desc">追随黑夜的 “升降机”</p>
                     </div>
@@ -123,10 +116,7 @@
             在这个深度，生物面临着双重挑战：既要利用微弱的光线寻找食物，又要避免被其他掠食者发现。斧头鱼正是这一环境下的进化杰作。
           </p>
           
-          <div class="img-card">
-            <img src="../../assets/image/animal/animal-3/twilight_zone.jpg" alt="深海分层图" class="content-img">
-            <p class="img-caption">生活在黑暗边缘的生命</p>
-          </div>
+         
         </div>
       </section>
 
@@ -150,7 +140,7 @@
         </div>
 
         <div class="img-card full-width">
-          <img src="../../assets/image/animal/animal-3/glowing.jpg" alt="发光的斧头鱼" class="content-img">
+          <img src="../../assets/image/animal/animal-3/bg.jpg" alt="发光的斧头鱼" class="content-img">
           <p class="img-caption">自带“隐身护盾”的深海猎手</p>
         </div>
       </section>
@@ -162,7 +152,7 @@
             斧头鱼的外表常被形容为“噩梦般的”。它们面部表情狰狞，嘴角向下，眼神空洞。但这种外貌纯粹是功能性的：巨大的嘴巴可以吞下比自己体型还大的猎物——在食物稀缺的深海，不能浪费任何一次捕食机会。其身体极度侧扁，只有几毫米厚，但这并不妨碍它们拥有强壮的肌肉进行短距离冲刺。
           </p>
           <div class="img-card">
-            <img src="../../assets/image/animal/animal-3/face.jpg" alt="斧头鱼面部特写" class="content-img" style="width:60%">
+            <img src="../../assets/image/animal/animal-3/front.jpg" alt="斧头鱼面部特写" class="content-img" style="width:60%">
             <p class="img-caption">虽面目可憎，却是生存大师</p>
           </div>
         </div>
@@ -211,6 +201,23 @@
 </script>
 
 <style scoped>
+
+.content-img {
+  width: 85%;        /* 原来是100%，现在缩小一点 */
+  max-width: 650px;  /* 给大屏上限，避免太宽 */
+  display: block;
+  margin: 0 auto;    /* 保持图片居中 */
+  border-radius: 12px;
+}
+
+/* 图片下面的文字也顺便规范一下间距 */
+.img-caption {
+  text-align: center;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-top: 6px;
+}
+
     body {
         margin: 0;
         padding: 0;

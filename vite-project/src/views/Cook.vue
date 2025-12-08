@@ -3,20 +3,40 @@
     <h1>做饭能让人开心</h1>
 
     <div class="cards">
-      <RouterLink v-for="item in articles" :key="item.id" :to="item.path" class="card">
-        <img :src="item.img" />
-        <h3>{{ item.title }}</h3>
+
+      <!-- 菜谱 1 -->
+      <RouterLink to="/article/cook-1" class="card">
+        <img src="/src/assets/image/card/tusi.png" alt="牛油果烤面包">
+        <h3>牛油果烤面包</h3>
+        <p class="desc">
+          一份简单又营养的早餐，用酥脆吐司搭配细腻的牛油果泥，让早晨更充满能量。
+        </p>
       </RouterLink>
+
+      <!-- 菜谱 2 -->
+      <RouterLink to="/article/cook-2" class="card">
+        <img src="/src/assets/image/card/rou.png" alt="红烧肉">
+        <h3>红烧肉的做法篇</h3>
+        <p class="desc">
+          色泽红亮、入口即化的经典家常菜，从选材到火候，让红烧肉更上一层楼。
+        </p>
+      </RouterLink>
+
+      <!-- 菜谱 3 -->
+      <RouterLink to="/article/cook-3" class="card">
+        <img src="/src/assets/image/card/salad.png" alt="地中海沙拉">
+        <h3>地中海沙拉</h3>
+        <p class="desc">
+          清爽开胃的地中海风味，橄榄油、番茄与芝士的完美结合，轻负担又美味。
+        </p>
+      </RouterLink>
+
     </div>
   </div>
 </template>
 
 <script setup>
-const articles = [
-  { id: 1, path: '/article/cook-1', title: '红烧肉的正确做法', img: '/src/assets/cook/cook-1.png' },
-  { id: 2, path: '/article/cook-2', title: '糖醋排骨入门篇', img: '/src/assets/cook/cook-2.png' },
-  { id: 3, path: '/article/cook-3', title: '不失败煎牛排', img: '/src/assets/cook/cook-3.png' }
-]
+// 这个页面不需要 JS 内容
 </script>
 
 <style scoped>
@@ -51,5 +71,11 @@ const articles = [
   height: 160px;
   object-fit: cover;
   border-radius: 8px;
+}
+
+.desc {
+  font-size: 14px;
+  color: #666;
+  margin-top: 6px;
 }
 </style>

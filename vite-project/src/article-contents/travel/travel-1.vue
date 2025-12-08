@@ -6,6 +6,7 @@
                 <span class="sub-text">AUTUMN</span>
             </div>
             <div class="nav-links">
+                 <RouterLink to="/" class="nav-link">首页</RouterLink>
                 <a href="#home" class="nav-link">古都之秋</a>
                 <a href="#spots" class="nav-link">赏枫名所</a>
                 <a href="#guide" class="nav-link">游玩攻略</a>
@@ -18,7 +19,7 @@
     </nav>
 
     <div id="home" class="hero-section">
-        <img src="../../assets/image/travel/travel-1/kyoto_red.jpg" alt="京都红叶" class="hero-bg">
+        <img src="../../assets/image/travel/travel-1/bg.png" alt="京都红叶" class="hero-bg">
         <div class="hero-text">
             <h1>千年一瞬，满城绯红</h1>
             <p>当秋风吹过鸭川，古老的寺庙被层林尽染。来京都，赴一场关于红叶的浪漫之约。</p >
@@ -33,7 +34,7 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <div class="card-img-container">
-                            <img src="../../assets/image/travel/travel-1/kiyomizu.jpg" alt="清水寺" class="card-img">
+                            <img src="../../assets/image/travel/travel-1/qinshui.png" alt="清水寺" class="card-img">
                         </div>
                         <h3 class="card-title">清水寺</h3>
                         <p class="card-desc">悬空舞台，红海云端</p>
@@ -49,7 +50,7 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <div class="card-img-container">
-                            <img src="../../assets/image/travel/travel-1/arashiyama.jpg" alt="岚山" class="card-img">
+                            <img src="../../assets/image/travel/travel-1/lanshan.png" alt="岚山" class="card-img">
                         </div>
                         <h3 class="card-title">岚山</h3>
                         <p class="card-desc">坐小火车穿梭彩林</p>
@@ -65,7 +66,7 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <div class="card-img-container">
-                            <img src="../../assets/image/travel/travel-1/tofukuji.jpg" alt="东福寺" class="card-img">
+                            <img src="../../assets/image/travel/travel-1/dongfu.png" alt="东福寺" class="card-img">
                         </div>
                         <h3 class="card-title">东福寺</h3>
                         <p class="card-desc">通天桥上，红叶如洗</p>
@@ -81,7 +82,7 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <div class="card-img-container">
-                            <img src="../../assets/image/travel/travel-1/eikando.jpg" alt="永观堂" class="card-img">
+                            <img src="../../assets/image/travel/travel-1/yongguan.png" alt="永观堂" class="card-img">
                         </div>
                         <h3 class="card-title">永观堂</h3>
                         <p class="card-desc">红叶的永恒代名词</p>
@@ -107,10 +108,6 @@
                     <li><strong>11月下旬：</strong> 清水寺、东福寺、岚山（市区全面见顷，最美时刻）。</li>
                     <li><strong>12月上旬：</strong> 下鸭神社（最后的红叶狩）。</li>
                 </ul>
-                <div class="img-card full-width">
-                    <img src="../../assets/image/travel/travel-1/maple_guide.jpg" alt="京都地图" class="content-img">
-                    <p class="img-caption">提前关注“红叶最前线”预测网站，灵活调整行程</p>
-                </div>
             </div>
         </section>
 
@@ -167,6 +164,11 @@ body { margin: 0; padding: 0; }
 /* 京都风配色 */
 .main-text { color: #3e2723; font-family: serif; letter-spacing: 2px; font-weight: bold; font-size: 1.5rem;}
 .sub-text { color: #b71c1c; font-family: serif; letter-spacing: 2px; font-weight: bold; font-size: 1.5rem; margin-left: 5px;}
+.nav-links {
+    display: flex;
+    gap: 2rem; /* ← 导航链接之间的距离 */
+    align-items: center;
+}
 
 .nav-link { color: #5d4037; text-decoration: none; transition: color 0.3s; position: relative; font-weight: 500;}
 .nav-link:hover { color: #b71c1c; }
@@ -222,7 +224,12 @@ body { margin: 0; padding: 0; }
     font-family: serif; font-size: 2rem; color: #b71c1c; border-bottom: 2px solid #3e2723; padding-bottom: 15px; margin-bottom: 30px;
 }
 .subchapter-title { font-size: 1.3rem; color: #5d4037; border-left: 5px solid #ffb300; padding-left: 15px; margin-bottom: 15px;}
-.travel-list { list-style: circle; padding-left: 20px; color: #5d4037; line-height: 2; font-size: 1.1rem;}
+.travel-list {
+    text-align: left;
+    padding-left: 1.2rem;
+    line-height: 1.8;
+    margin-top: 10px;
+}
 .custom-paragraph { font-size: 1.1rem; line-height: 1.8; color: #4e342e; text-align: justify; margin-bottom: 20px;}
 .two-column-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
 .content-img { width: 100%; border-radius: 2px; box-shadow: 5px 5px 15px rgba(0,0,0,0.2); }

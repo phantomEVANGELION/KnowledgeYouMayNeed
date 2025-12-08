@@ -72,20 +72,18 @@
 </template>
 
 <script setup>
-import { ref, watchEffect } from 'vue'
+import { inject, computed } from 'vue'
 
-// 主题状态变量
-const darkTheme = ref(false)
+const theme = inject('theme')
+const toggleTheme = inject('toggleTheme')
 
-// 监听主题变化，动态添加/移除dark类到html根元素
-watchEffect(() => {
-  if (darkTheme.value) {
-    document.documentElement.classList.add('dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-  }
+// 按钮状态直接与全局主题同步
+const darkTheme = computed({
+  get: () => theme.value === 'dark',
+  set: val => toggleTheme()
 })
 </script>
+
 
 <style scoped>
 .switch {

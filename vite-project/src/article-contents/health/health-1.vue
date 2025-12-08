@@ -6,7 +6,8 @@
                 <span class="sub-text">CARE</span>
             </div>
             <div class="nav-links">
-                <a href="#home" class="nav-link">指南首页</a>
+                 <RouterLink to="/" class="nav-link">首页</RouterLink>
+                <a href="#home" class="nav-link">指南主页</a>
                 <a href="#pillars" class="nav-link">四大基石</a>
                 <a href="#diet" class="nav-link">饮食建议</a>
                 <a href="#exercise" class="nav-link">运动调理</a>
@@ -18,10 +19,10 @@
     </nav>
 
     <div id="home" class="hero-section">
-        <img src="../../assets/image/health/health-1/hero_medical.jpg" alt="健康生活" class="hero-bg">
+   
         <div class="hero-text">
             <h1>稳住血压，守护健康</h1>
-            <p>高血压被称为“无声的杀手”。科学的日常管理，是中老年人长寿安康的关键。让关爱从每一顿饭、每一步路开始。</p >
+            <p>高血压被称为“无声的杀手”。科学地生活，是中老年人长寿安康的关键。让关爱从每一顿饭、每一步路开始。</p >
             <a href="#diet" class="explore-btn">阅读指南</a>
         </div>
     </div>
@@ -33,14 +34,14 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <div class="card-img-container">
-                            <img src="../../assets/image/health/health-1/low_salt.png" alt="低盐饮食" class="card-img">
+                     
                         </div>
                         <h3 class="card-title">低盐饮食</h3>
                         <p class="card-desc">控制钠摄入是第一要务</p>
                     </div>
                     <div class="flip-card-back">
                         <h3 class="card-title">执行标准</h3>
-                        <p class="card-desc">每人每天食盐摄入量不超过5克（约一啤酒盖）。警惕隐形盐：酱油、咸菜、加工肉类。多吃富含钾的食物（如香蕉、菠菜）有助于钠的排出。</p>
+                        <p class="card-desc">每人每天食盐摄入量不超过5克（约一茶匙）。警惕隐形盐：酱油、咸菜、加工肉类。多吃富含钾的食物（如香蕉、菠菜）有助于钠的排出。</p>
                     </div>
                 </div>
             </div>
@@ -49,7 +50,7 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <div class="card-img-container">
-                            <img src="../../assets/image/health/health-1/monitor.png" alt="规律监测" class="card-img">
+         
                         </div>
                         <h3 class="card-title">规律监测</h3>
                         <p class="card-desc">知己知彼，记录变化</p>
@@ -65,7 +66,7 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <div class="card-img-container">
-                            <img src="../../assets/image/health/health-1/medication.png" alt="遵医嘱服药" class="card-img">
+                         
                         </div>
                         <h3 class="card-title">规范用药</h3>
                         <p class="card-desc">不随意停药，不乱吃偏方</p>
@@ -80,7 +81,7 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <div class="card-img-container">
-                            <img src="../../assets/image/health/health-1/exercise.png" alt="有氧运动" class="card-img">
+                          
                         </div>
                         <h3 class="card-title">适度运动</h3>
                         <p class="card-desc">最好的天然降压药</p>
@@ -127,12 +128,12 @@
             <h3 class="chapter-title">二、生活细节：注意这三个“慢”</h3>
             <div class="paragraph-group right-offset">
                 <p class="custom-paragraph">
-                    <strong>1. 起床慢：</strong>早晨是血压高峰期。醒来后不要猛然坐起，在床上平躺或静坐2分钟再下床，防止体位性低血压或脑缺血。<br>
+                    <strong>1. 起床慢：</strong>早晨血压会相对。醒来后不要猛然坐起，在床上平躺或静坐2分钟再下床，防止体位性低血压或脑缺血。<br>
                     <strong>2. 排便慢：</strong>用力排便会导致腹压升高，进而使血压飙升。老年人应多吃纤维，保持大便通畅，切忌用力过猛。<br>
                     <strong>3. 吃饭慢：</strong>狼吞虎咽会增加心脏负担。细嚼慢咽有助于产生饱腹感，控制体重，这对控制血压同样重要。
                 </p>
                 <div class="img-card">
-                    <img src="../../assets/image/health/health-1/calm.jpg" alt="平和心态" class="content-img">
+                    <img src="../../assets/image/health/health-1/xintai.jpg" alt="平和心态" class="content-img">
                     <p class="img-caption">平和的心态与规律的作息是最好的良药</p>
                 </div>
             </div>
@@ -175,7 +176,7 @@ body { margin: 0; padding: 0; box-sizing: border-box; }
 
 .main-text { color: #1565c0; font-weight: 700; font-size: 1.6rem; } /* 医疗蓝 */
 .sub-text { color: #e53935; font-weight: 700; margin-left: 5px; font-size: 1.6rem;} /* 爱心红 */
-
+.nav-links { display: flex; gap: 2rem; }
 .nav-link { text-decoration: none; color: #424242; font-weight: 500; transition: all 0.3s; position: relative;}
 .nav-link:hover { color: #1565c0; }
 .nav-link::after {
@@ -186,7 +187,7 @@ body { margin: 0; padding: 0; box-sizing: border-box; }
 .hero-section { position: relative; width: 100vw; height: 85vh; overflow: hidden; }
 .hero-bg { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.9); }
 .hero-text {
-    position: absolute; top: 50%; left: 10%; transform: translateY(-50%);
+    position: absolute; top: 50%; left: 35%; transform: translateY(-50%);
     max-width: 500px; color: #0d47a1;
 }
 .hero-text h1 { font-size: 3rem; margin-bottom: 1rem; color: #0d47a1; }
@@ -236,6 +237,6 @@ body { margin: 0; padding: 0; box-sizing: border-box; }
 .custom-paragraph { font-size: 1.1rem; line-height: 1.8; color: #424242; margin-bottom: 20px; text-align: justify; }
 .two-column-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
 .img-card { margin-top: 30px; text-align: center; }
-.content-img { max-width: 100%; border-radius: 8px; }
+.content-img { max-width: 50%; border-radius: 8px; }
 .img-caption { color: #888; font-size: 0.9rem; margin-top: 8px; }
 </style>

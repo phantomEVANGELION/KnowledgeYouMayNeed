@@ -12,7 +12,7 @@
   </nav>
 
   <div id="home" class="hero-section">
-    <img src="../../assets/image/health/health-3/neck-health.jpg" alt="颈椎保护背景" class="hero-bg">
+    <img src="../../assets/image/health/health-3/bg.png" alt="颈椎保护背景" class="hero-bg">
     <div class="hero-text">
       <h1>{{ title }}</h1>
       <p>{{ description }}</p>
@@ -37,7 +37,7 @@
           <div class="flip-card-front"><h3>20-20-20法则</h3></div>
           <div class="flip-card-back">
             <h3>眼睛与颈椎休息</h3>
-            <p>每工作20分钟，休息20秒，看向20英尺（约6米）以外的物体。同时进行颈部活动。</p>
+            <p>每工作20分钟，休息20秒，看向6米以外的物体。同时进行颈部活动。</p>
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@
       <h3 class="chapter-title">一、颈椎病的成因与常见症状</h3>
       <div class="paragraph-group">
         <p class="custom-paragraph">
-          办公室人群的颈椎问题，主要由长期**固定姿势**和**肌肉劳损**引起。长时间保持头部前倾的姿势（俗称“乌龟颈”）会导致颈椎前方的肌肉过度拉伸，而后方的肌肉过度紧张。
+          办公室人群的颈椎问题，主要由长期固定姿势和肌肉劳损引起。长时间保持头部前倾的姿势会导致颈椎前方的肌肉过度拉伸，而后方的肌肉过度紧张。
         </p>
         <h4 class="subchapter-title">常见症状自查：</h4>
         <ul class="article-list">
@@ -145,7 +145,13 @@ onMounted(() => {
 .chapter-title { border-bottom: 3px solid #1565c0; padding-bottom: 10px; margin-bottom: 30px; color: #0d47a1; font-size: 1.8rem; font-weight: 600;}
 .subchapter-title { color: #1565c0; font-size: 1.3rem; margin-top: 20px; margin-bottom: 15px; border-left: 5px solid #64b5f6; padding-left: 15px;}
 .custom-paragraph { font-size: 1.05rem; line-height: 1.8; color: #444; margin-bottom: 15px; text-align: justify; }
-.article-list { list-style: disc; padding-left: 30px; line-height: 1.6; color: #555; }
-.article-ordered-list { list-style: decimal; padding-left: 30px; line-height: 1.6; color: #555; }
+.article-list { text-align: left;
+    padding-left: 1.2rem;
+    line-height: 1.8;
+    margin-top: 10px; }
+.article-ordered-list { text-align: left;
+    padding-left: 1.2rem;
+    line-height: 1.8;
+    margin-top: 10px; }
 .two-column-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
 </style>

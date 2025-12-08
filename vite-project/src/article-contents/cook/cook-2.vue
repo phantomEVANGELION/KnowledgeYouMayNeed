@@ -3,6 +3,7 @@
     <div class="nav-content">
       <div class="nav-title"><span class="main-text">CLASSIC</span><span class="sub-text">TASTE</span></div>
       <div class="nav-links">
+          <RouterLink to="/" class="nav-link">首页</RouterLink>
         <a href="#home" class="nav-link">经典传承</a>
         <a href="#secret" class="nav-link">选材秘诀</a>
         <a href="#recipe" class="nav-link">烹饪关键</a>
@@ -12,7 +13,7 @@
   </nav>
 
   <div id="home" class="hero-section">
-    <img src="../../assets/image/cook/cook-2/pork_bg.jpg" alt="红烧肉背景" class="hero-bg">
+    <img src="../../assets/image/cook/cook-2/bg.png" alt="红烧肉背景" class="hero-bg">
     <div class="hero-text">
       <h1>家的味道</h1>
       <p>肥而不腻，入口即化。一碗红烧肉，是每个中国家庭餐桌上的温暖记忆。</p>
@@ -55,7 +56,7 @@
           </div>
           <div class="flip-card-back">
             <h3>去腥增香</h3>
-            <p>传统做法不加水，全靠黄酒（或花雕酒）焖煮，酒气挥发后只留下浓郁的肉香。加水反而会让肉寡淡无味，难以软烂</p>
+            <p>传统做法不加水，全靠黄酒（或花雕酒）焖煮，酒气挥发后只留下浓郁的肉香。加水反而会让肉寡淡无味，难以软烂。</p>
           </div>
         </div>
       </div>
@@ -99,50 +100,224 @@
 <script setup>
 import ThemeButton from '../../components/ThemeButton.vue'
 import { onMounted } from 'vue';
- onMounted(() => {
-    // 平滑滚动到锚点
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            targetElement.scrollIntoView({
-            behavior: 'smooth'
-            });
-        }
+
+onMounted(() => {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth'
         });
+      }
     });
-    });
+  });
+});
 </script>
 
 <style scoped>
-/* 精简版CSS，复用核心布局 */
-.nav-container { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.9); z-index: 99; display: flex; justify-content: center; backdrop-filter: blur(5px);}
-.nav-content { width: 100%; max-width: 1200px; height: 60px; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;}
-.main-text { color: #8d6e63; font-weight: bold; font-size: 1.2rem; }
-.sub-text { color: #d84315; font-weight: bold; margin-left: 5px; font-size: 1.2rem; }
-.nav-links { display: flex; gap: 20px; }
-.nav-link { text-decoration: none; color: #333; transition: 0.3s; }
-.nav-link:hover { color: #d84315; }
+/* =========================================
+   1. 定义 CSS 变量主题系统
+   ========================================= */
+:global(:root) {
+    /* 亮色模式 (Light Mode) */
+    --bg-body: #ffffff;
+    --nav-bg: rgba(255, 255, 255, 0.9);
+    --text-main: #333333;
+    --text-sub: #555555;
+    --text-light: #ffffff;
+    --brand-brown: #8d6e63;
+    --brand-red: #d84315;
+    
+    /* 区域背景 */
+    --desk-bg: #fbe9e7; /* 浅肉色 */
+    --card-bg-front: #ffffff;
+    --card-bg-back: #d84315;
+    
+    /* 文字颜色 */
+    --chapter-title: #3e2723;
+    --nav-link-hover: #d84315;
+    --shadow-color: rgba(0,0,0,0.1);
+}
 
+:global(html.dark) {
+    /* 暗色模式 (Dark Mode) */
+    --bg-body: #121212;
+    --nav-bg: rgba(28, 28, 28, 0.9);
+    --text-main: #e0e0e0;
+    --text-sub: #b0b0b0;
+    --text-light: #e0e0e0;
+    
+    --brand-brown: #a1887f; /* 稍微提亮一点以便在黑底上看清 */
+    --brand-red: #ff7043;   /* 亮橙红色 */
+    
+    /* 区域背景 */
+    --desk-bg: #2d2422;     /* 深咖色，保持红烧肉的暖调 */
+    --card-bg-front: #1e1e1e;
+    --card-bg-back: #be360c; /* 深一点的红，避免夜间刺眼 */
+    
+    --chapter-title: #ffab91;
+    --nav-link-hover: #ff7043;
+    --shadow-color: rgba(0,0,0,0.5);
+}
+
+/* 基础背景设置 */
+.content, .desk, .nav-container {
+    transition: background-color 0.3s, color 0.3s;
+}
+main {
+    background-color: var(--bg-body);
+}
+
+/* =========================================
+   2. 导航栏 (Navbar)
+   ========================================= */
+.nav-container { 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    background: var(--nav-bg); 
+    z-index: 99; 
+    display: flex; 
+    justify-content: center; 
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid transparent;
+}
+:global(html.dark) .nav-container {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.nav-content { width: 100%; max-width: 1200px; height: 60px; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;}
+.main-text { color: var(--brand-brown); font-weight: bold; font-size: 1.2rem; }
+.sub-text { color: var(--brand-red); font-weight: bold; margin-left: 5px; font-size: 1.2rem; }
+.nav-links { display: flex; gap: 20px; }
+.nav-link { text-decoration: none; color: var(--text-main); transition: 0.3s; font-weight: 500;}
+.nav-link:hover { color: var(--nav-link-hover); }
+
+/* =========================================
+   3. Hero Section (无需大改，背景是图片)
+   ========================================= */
 .hero-section { height: 80vh; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden;}
 .hero-bg { position: absolute; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7); }
 .hero-text { position: relative; color: white; text-align: center; }
-.hero-text h1 { font-size: 3rem; margin-bottom: 10px; }
-.explore-btn { padding: 10px 25px; background: #d84315; color: white; text-decoration: none; border-radius: 4px; }
+.hero-text h1 { font-size: 3rem; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.5);}
+.explore-btn { padding: 10px 25px; background: var(--brand-red); color: white; text-decoration: none; border-radius: 4px; transition: background 0.3s;}
+.explore-btn:hover { filter: brightness(1.1); }
 
-.desk { background: #fbe9e7; padding: 40px 20px; text-align: center; }
-.section-home-title { color: #8d6e63; font-size: 1.8rem; margin-bottom: 30px; }
-.card-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-.flip-card { width: 250px; height: 320px; perspective: 1000px; cursor: pointer; }
-.flip-card-inner { width: 100%; height: 100%; transition: transform 0.6s; transform-style: preserve-3d; position: relative; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 10px;}
+/* =========================================
+   4. Desk / Cards Section (翻转卡片)
+   ========================================= */
+.desk { background: var(--desk-bg); padding: 60px 20px; text-align: center; }
+.section-home-title { color: var(--brand-brown); font-size: 1.8rem; margin-bottom: 40px; font-weight: bold; letter-spacing: 2px;}
+
+.card-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+.flip-card { width: 260px; height: 340px; perspective: 1000px; cursor: pointer; }
+.flip-card-inner { 
+    width: 100%; height: 100%; 
+    transition: transform 0.6s; 
+    transform-style: preserve-3d; 
+    position: relative; 
+    box-shadow: 0 10px 20px var(--shadow-color); 
+    border-radius: 12px;
+}
 .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
-.flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; background: white; border-radius: 10px; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center;}
-.flip-card-back { background: #d84315; color: white; transform: rotateY(180deg); }
-.card-img { width: 100px; height: 100px; object-fit: contain; margin-bottom: 20px; }
 
-.content { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-.chapter-title { border-bottom: 2px solid #d84315; padding-bottom: 10px; margin-bottom: 20px; color: #3e2723;}
-.step-list { line-height: 2; color: #555; }
+.flip-card-front, .flip-card-back { 
+    position: absolute; width: 100%; height: 100%; 
+    backface-visibility: hidden; 
+    border-radius: 12px; 
+    padding: 25px; 
+    box-sizing: border-box; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+}
+
+/* 正面样式 */
+.flip-card-front { 
+    background: var(--card-bg-front); 
+    color: var(--text-main);
+}
+.flip-card-front h3 { margin-top: 15px; color: var(--brand-brown); }
+
+/* 背面样式 */
+.flip-card-back { 
+    background: var(--card-bg-back); 
+    color: white; 
+    transform: rotateY(180deg); 
+    /* 关键改动：背面文字左对齐/两端对齐，提升阅读体验 */
+    align-items: flex-start; 
+    text-align: left; 
+}
+.flip-card-back h3 { 
+    width: 100%;
+    text-align: center; 
+    margin-bottom: 15px; 
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 10px;
+}
+.flip-card-back p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: justify; /* 两端对齐更整齐 */
+}
+
+.card-img-container {
+    width: 120px; height: 120px; 
+    display: flex; align-items: center; justify-content: center;
+}
+.card-img { width: 100%; height: 100%; object-fit: contain; }
+
+/* =========================================
+   5. Recipe Content (正文区域)
+   ========================================= */
+.content { max-width: 800px; margin: 0 auto; padding: 60px 20px; background-color: var(--bg-body);}
+
+.chapter-section { margin-bottom: 50px; }
+
+.chapter-title { 
+    border-bottom: 2px solid var(--brand-red); 
+    padding-bottom: 10px; 
+    margin-bottom: 25px; 
+    color: var(--chapter-title);
+    font-size: 1.5rem;
+}
+
+.subchapter-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--text-main);
+    font-size: 1.1rem;
+    /* 确保小标题也是左对齐 */
+    text-align: left; 
+}
+
+/* 关键改动：文字排版优化 */
+.paragraph-group {
+    /* 确保所有内部文本左对齐 */
+    text-align: left; 
+}
+
+.custom-paragraph {
+    line-height: 1.8;
+    color: var(--text-sub);
+    margin-bottom: 15px;
+    text-align: justify; /* 正文推荐两端对齐 */
+    font-size: 1.05rem;
+}
+
+.article-list {
+    line-height: 2;
+    color: var(--text-sub);
+    padding-left: 20px; /* 保留列表缩进 */
+    text-align: left;
+}
+.article-list li {text-align: left;
+    padding-left: 1.2rem;
+    line-height: 1.8;
+    margin-top: 10px;}
+strong { color: var(--text-main); }
 </style>

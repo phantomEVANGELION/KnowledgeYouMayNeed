@@ -12,7 +12,7 @@
   </nav>
 
   <div id="home" class="hero-section">
-    <img src="../../assets/image/health/health-2/winter-health.jpg" alt="冬季养生背景" class="hero-bg">
+    <img src="../../assets/image/health/health-2/bg.png" alt="冬季养生背景" class="hero-bg">
     <div class="hero-text">
       <h1>{{ title }}</h1>
       <p>{{ description }}</p>
@@ -21,7 +21,7 @@
   </div>
 
   <div id="diet" class="desk">
-    <p class="section-home-title">冬季养生五要素（Flip Cards）</p>
+    <p class="section-home-title">冬季养生要素（Flip Cards）</p>
     <div class="card-container">
       <div class="flip-card">
         <div class="flip-card-inner">
@@ -69,7 +69,7 @@
         <p class="custom-paragraph">
           人体70%的免疫细胞集中在肠道。冬季通过温补和均衡营养来保护肠道菌群健康，是提高整体免疫力的重要途径。
         </p>
-        <h4 class="subchapter-title">冬季“超级食物”清单：</h4>
+        <h4 class="subchapter-title">冬季推荐食物清单：</h4>
         <ul class="article-list">
           <li><strong>温性食物：</strong> 多吃根茎类蔬菜（如山药、芋头）和温性肉类（如羊肉），有助于身体产热和御寒。</li>
           <li><strong>发酵食品：</strong> 酸奶、泡菜等富含益生菌，能维持肠道菌群平衡，间接提高免疫力。</li>
@@ -143,6 +143,9 @@ onMounted(() => {
 .chapter-title { border-bottom: 3px solid #e64a19; padding-bottom: 10px; margin-bottom: 30px; color: #bf360c; font-size: 1.8rem; font-weight: 600;}
 .subchapter-title { color: #e64a19; font-size: 1.3rem; margin-top: 20px; margin-bottom: 15px; border-left: 5px solid #ffab91; padding-left: 15px;}
 .custom-paragraph { font-size: 1.05rem; line-height: 1.8; color: #444; margin-bottom: 15px; text-align: justify; }
-.article-list { list-style: disc; padding-left: 30px; line-height: 1.6; color: #555; }
+.article-list {text-align: left;
+    padding-left: 1.2rem;
+    line-height: 1.8;
+    margin-top: 10px;}
 .two-column-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
 </style>

@@ -1,9 +1,6 @@
 <template>
   <div class="home">
-    <ThemeButton style="margin: 10px 0px;"></ThemeButton>
-    <!-- <video autoplay muted loop class="bg-video">
-      <source src="../assets/bg.mp4" type="video/mp4" />
-    </video> -->
+    
     <div class="overlay">
       <h1>欢迎来到知识世界</h1>
       <p>探索自然、旅游、美食与健康的奇妙旅程。</p>
@@ -17,9 +14,9 @@
 
       <div class="category-buttons">
         <router-link to="/animals" class="category-btn">动物世界</router-link>
-        <router-link to="/travel" class="category-btn">旅游攻略</router-link>
         <router-link to="/cook" class="category-btn">做菜推荐</router-link>
         <router-link to="/health" class="category-btn">健康科普</router-link>
+        <router-link to="/travel" class="category-btn">旅游攻略</router-link>
       </div>
       
     </div>
@@ -27,7 +24,7 @@
 </template>
 <script setup>
   import { useRouter } from 'vue-router'
-  import ThemeButton from '../components/ThemeButton.vue'
+  
 
   // 创建路由实例
   const router = useRouter()
@@ -140,7 +137,7 @@
  margin: 0;
  width: 3rem;
  height: 3rem;
- background: #282936;
+ background: #19925c;
  border-radius: 1.625rem;
 }
 .dark .learn-more .circle {
@@ -192,7 +189,7 @@
   bottom: 0;
   padding: 0.75rem 0;
   margin: 0 0 0 1.85rem;
-  color: #3b3c4f;
+  color: #109a87;
   font-weight: 700;
   line-height: 1.6;
   text-align: center;

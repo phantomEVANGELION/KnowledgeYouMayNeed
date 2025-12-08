@@ -17,7 +17,6 @@ import Cook2 from '../article-contents/cook/cook-2.vue'
 import Cook3 from '../article-contents/cook/cook-3.vue'
 import Travel2 from '../article-contents/travel/travel-2.vue'
 import Travel3 from '../article-contents/travel/travel-3.vue'
-import Travel4 from '../article-contents/travel/travel-4.vue'
 import Travel1 from '../article-contents/travel/travel-1.vue'
 import Health1 from '../article-contents/health/health-1.vue'
 import Health2 from '../article-contents/health/health-2.vue'
@@ -45,7 +44,6 @@ const routes = [
   { path: '/article/travel-1', component: Travel1 },
   { path: '/article/travel-2', component: Travel2 },
   { path: '/article/travel-3', component: Travel3 },
-  { path: '/article/travel-4', component: Travel4 },
   { path: '/article/health-1', component: Health1 },
   { path: '/article/health-2', component: Health2 },
   { path: '/article/health-3', component: Health3 },

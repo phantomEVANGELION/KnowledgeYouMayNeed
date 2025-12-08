@@ -12,7 +12,7 @@
   </nav>
 
   <div id="home" class="hero-section">
-    <img src="../../assets/image/travel/travel-3/venice_bg.jpg" alt="威尼斯背景" class="hero-bg">
+    <img src="../../assets/image/travel/travel-3/vini.png" alt="威尼斯背景" class="hero-bg">
     <div class="hero-text">
       <h1>迷失在水城</h1>
       <p>避开圣马可广场的人潮，寻找面具背后的真实威尼斯。这里有本地人光顾的酒馆，以及只有迷路才能发现的绝美视角。</p>
@@ -143,6 +143,10 @@ onMounted(() => {
 .chapter-title { border-bottom: 2px solid #b71c1c; padding-bottom: 10px; margin-bottom: 30px; color: #006064; font-size: 1.8rem;}
 .subchapter-title { color: #b71c1c; font-size: 1.3rem; margin-top: 20px; margin-bottom: 10px; border-left: 4px solid #006064; padding-left: 10px;}
 .custom-paragraph { font-size: 1.05rem; line-height: 1.8; color: #4e342e; margin-bottom: 15px; text-align: justify; }
-.article-list { list-style: disc; padding-left: 25px; line-height: 1.6; color: #555; }
+.article-list {  text-align: left;
+    padding-left: 1.2rem;
+    line-height: 1.8;
+    margin-top: 10px;}
 .two-column-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
 </style>
+

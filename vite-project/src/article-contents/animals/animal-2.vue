@@ -7,7 +7,8 @@
         </div>
 
         <div class="nav-links">
-            <a href="#home" class="nav-link">首页</a>
+            <RouterLink to="/" class="nav-link">首页</RouterLink>
+            <a href="#home" class="nav-link">主页</a>
             <a href="#flock" class="nav-link">鹦鹉种类</a>
             <a href="#behavior" class="nav-link">生存智慧</a>
             <a href="#ecology" class="nav-link">生态角色</a>
@@ -20,7 +21,7 @@
         </div>
     </nav>
     <div id="home" class="hero-section">
-    <img src="../../assets/image/animal/animal-2/macawBegin.jpg" alt="背景图" class="hero-bg">
+    <img src="../../assets/image/animal/animal-2/bg.jpg" alt="背景图" class="hero-bg">
     
     <div class="hero-text">
         <h1>雨林彩虹</h1>
@@ -35,7 +36,7 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <div class="card-img-container">
-                            <img src="../../assets/image/animal/animal-2/scarlet.png" alt="绯红金刚鹦鹉" class="card-img">
+                            <img src="../../assets/image/animal/animal-2/red.png" alt="绯红金刚鹦鹉" class="card-img">
                         </div>
                         <h3 class="card-title">绯红金刚鹦鹉</h3>
                         <p class="card-desc">雨林中 “最耀眼的火焰”</p>
@@ -53,7 +54,7 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <div class="card-img-container">
-                            <img src="../../assets/image/animal/animal-2/blue_gold.png" alt="蓝黄金刚鹦鹉" class="card-img">
+                            <img src="../../assets/image/animal/animal-2/yellow.png" alt="蓝黄金刚鹦鹉" class="card-img">
                         </div>
                         <h3 class="card-title">蓝黄金刚鹦鹉</h3>
                         <p class="card-desc">性格温和的 “亲善大使”</p>
@@ -71,7 +72,7 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <div class="card-img-container">
-                            <img src="../../assets/image/animal/animal-2/hyacinth.png" alt="紫蓝金刚鹦鹉" class="card-img">
+                            <img src="../../assets/image/animal/animal-2/blue.png" alt="紫蓝金刚鹦鹉" class="card-img">
                         </div>
                         <h3 class="card-title">紫蓝金刚鹦鹉</h3>
                         <p class="card-desc">濒危的 “蓝色巨人”</p>
@@ -84,23 +85,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <div class="card-img-container">
-                            <img src="../../assets/image/animal/animal-2/chick.png" alt="雏鸟与繁育" class="card-img">
-                        </div>
-                        <h3 class="card-title">树洞中的生命</h3>
-                        <p class="card-desc">依赖森林古树的 “脆弱后代”</p>
-                    </div>
-                    <div class="flip-card-back">
-                        <h3 class="card-title">详细信息</h3>
-                        <p class="card-desc">金刚鹦鹉不筑巢，而是依赖高大枯树的天然树洞繁殖。雏鸟孵化期约28天，由双亲共同喂养。<br>
-                            由于合适的树洞稀缺，且面临巨嘴鸟等天敌掠食，雏鸟成活率并不高。这使得每一只成年金刚鹦鹉都显得弥足珍贵。
-                        </p>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
     <main class="content">
@@ -119,7 +104,7 @@
           </p>
           
           <div class="img-card">
-            <img src="../../assets/image/animal/animal-2/rainforest.jpg" alt="亚马逊雨林俯瞰" class="content-img">
+            <img src="../../assets/image/animal/animal-2/forest.png" alt="亚马逊雨林俯瞰" class="content-img">
             <p class="img-caption">生活在数十米高空的冠层居民</p>
           </div>
         </div>
@@ -145,7 +130,7 @@
         </div>
 
         <div class="img-card full-width">
-          <img src="../../assets/image/animal/animal-2/claylick.jpg" alt="舔食粘土的鹦鹉群" class="content-img">
+          <img src="../../assets/image/animal/animal-2/carve.png" alt="舔食粘土的鹦鹉群" class="content-img">
           <p class="img-caption">色彩斑斓的“粘土盛宴”：解毒与社交的场所</p>
         </div>
       </section>
@@ -164,7 +149,7 @@
             在群体中，金刚鹦鹉通过复杂的叫声进行交流。不同的尖叫声代表警报、联络或求偶。它们甚至能识别家庭成员的声音特征，在嘈杂的雨林中准确找到彼此。
           </p>
           <div class="img-card">
-            <img src="../../assets/image/animal/animal-2/couple.jpg" alt="相互理毛的鹦鹉" class="content-img">
+            <img src="../../assets/image/animal/animal-2/couple.png" alt="相互理毛的鹦鹉" class="content-img">
             <p class="img-caption">相伴一生：自然界最动人的爱情故事</p>
           </div>
         </div>
@@ -194,7 +179,7 @@
           </p>
           
           <div class="img-card">
-            <img src="../../assets/image/animal/animal-2/rio.jpg" alt="里约大冒险原型" class="content-img">
+            <img src="../../assets/image/animal/animal-2/movie.png" alt="里约大冒险原型" class="content-img">
             <p class="img-caption">《里约大冒险》引发了全球对鹦鹉保护的关注</p>
           </div>
         </div>
@@ -655,4 +640,21 @@
         background-color: #1b5e20;
         transform: translateX(0) scale(1.05);
     }
+    /* 控制从 forest 开始往后的正文内容图片尺寸 */
+.content-img {
+  width: 85%;        /* 原来是100%，现在缩小一点 */
+  max-width: 650px;  /* 给大屏上限，避免太宽 */
+  display: block;
+  margin: 0 auto;    /* 保持图片居中 */
+  border-radius: 12px;
+}
+
+/* 图片下面的文字也顺便规范一下间距 */
+.img-caption {
+  text-align: center;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-top: 6px;
+}
+
 </style>

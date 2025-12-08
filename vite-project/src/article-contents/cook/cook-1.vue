@@ -6,6 +6,7 @@
                 <span class="sub-text">MORNING</span>
             </div>
             <div class="nav-links">
+                  <RouterLink to="/" class="nav-link">首页</RouterLink>
                 <a href="#home" class="nav-link">早餐简介</a>
                 <a href="#ingredients" class="nav-link">所需食材</a>
                 <a href="#steps" class="nav-link">制作步骤</a>
@@ -18,11 +19,10 @@
     </nav>
 
     <div id="home" class="hero-section">
-        <img src="../../assets/image/cook/cook-1/hero_toast.jpg" alt="牛油果吐司背景" class="hero-bg">
+        <img src="../../assets/image/cook/cook-1/bg.png" alt="牛油果吐司背景" class="hero-bg">
         <div class="hero-text">
             <h1>唤醒清晨</h1>
             <p>我们享用的不仅仅是早餐，更是一种生活态度。5分钟，用绵密的口感与丰富的营养，开启元气满满的一天。</p >
-            <a href="#steps" class="explore-btn">开始烹饪</a>
         </div>
     </div>
 
@@ -33,7 +33,7 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <div class="card-img-container">
-                            <img src="../../assets/image/cook/cook-1/avocado.png" alt="成熟牛油果" class="card-img">
+                            <img src="../../assets/image/cook/cook-1/veg.png" alt="成熟牛油果" class="card-img">
                         </div>
                         <h3 class="card-title">哈斯牛油果</h3>
                         <p class="card-desc">森林奶油，口感绵密</p>
@@ -65,7 +65,7 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <div class="card-img-container">
-                            <img src="../../assets/image/cook/cook-1/egg.png" alt="无菌蛋" class="card-img">
+                            <img src="../../assets/image/cook/cook-1/egg.jpg" alt="无菌蛋" class="card-img">
                         </div>
                         <h3 class="card-title">流心水波蛋</h3>
                         <p class="card-desc">注入灵魂的金色瀑布</p>
@@ -80,7 +80,7 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <div class="card-img-container">
-                            <img src="../../assets/image/cook/cook-1/spices.png" alt="调味" class="card-img">
+                            <img src="../../assets/image/cook/cook-1/pep.png" alt="调味" class="card-img">
                         </div>
                         <h3 class="card-title">点睛调味</h3>
                         <p class="card-desc">简单调味，还原本身</p>
@@ -105,7 +105,6 @@
                     <strong>Step 4 装饰：</strong>撒上欧芹碎、辣椒面或奇亚籽，即可享用。
                 </p>
                 <div class="img-card full-width">
-                    <img src="../../assets/image/cook/cook-1/step_img.jpg" alt="制作过程" class="content-img">
                     <p class="img-caption">简单四步，还原咖啡馆级早午餐</p>
                 </div>
             </div>
@@ -123,7 +122,7 @@
                 <div class="column right-column">
                     <h4 class="subchapter-title">膳食纤维与微量元素</h4>
                     <p class="custom-paragraph">
-                        搭配全麦面包，这顿早餐提供了丰富的膳食纤维，有助于消化系统健康。此外，牛油果还含有丰富的钾元素（甚至比香蕉还多）以及维生素E，对皮肤抗氧化大有裨益。
+                        搭配全麦面包，这顿早餐提供了丰富的膳食纤维。此外，牛油果还含有丰富的钾元素,以及维生素E，有抗氧化的效果。
                     </p>
                 </div>
             </div>
@@ -189,7 +188,7 @@ body { margin: 0; padding: 0; box-sizing: border-box; }
 .hero-bg { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85); }
 .hero-text {
     position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-    text-align: center; color: white;
+    text-align: center; color: rgb(79, 171, 86);
 }
 .hero-text h1 { font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
 
@@ -240,7 +239,10 @@ body { margin: 0; padding: 0; box-sizing: border-box; }
 .chapter-title {
     font-size: 1.8rem; border-bottom: 3px solid #81c784; padding-bottom: 10px; margin-bottom: 30px; color: #2e7d32;
 }
-.custom-paragraph { font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 20px; }
+.custom-paragraph {  line-height: 2;
+    color: var(--text-sub);
+    padding-left: 20px; /* 保留列表缩进 */
+    text-align: left; }
 .subchapter-title { color: #558b2f; font-size: 1.3rem; margin-bottom: 15px; border-left: 4px solid #8d6e63; padding-left: 10px; }
 .two-column-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; }
 .img-card { margin-top: 20px; }

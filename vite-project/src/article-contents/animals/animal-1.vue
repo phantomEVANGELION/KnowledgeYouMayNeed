@@ -9,13 +9,15 @@
         </div>
 
         <!-- 第二块：导航链接 -->
-        <div class="nav-links">
-            <a href="#home" class="nav-link">首页</a>
-            <a href="#pride" class="nav-link">狮群介绍</a>
-            <a href="#behavior" class="nav-link">生活习性</a>
-            <a href="#influence" class="nav-link">文化影响</a>
-            <a href="#knowledge" class="nav-link">更多知识</a>
-        </div>
+       <div class="nav-links">
+    <RouterLink to="/" class="nav-link">首页</RouterLink>
+    <a href="#home" class="nav-link">主页</a>
+    <a href="#pride" class="nav-link">狮群介绍</a>
+    <a href="#behavior" class="nav-link">生活习性</a>
+    <a href="#influence" class="nav-link">文化影响</a>
+    <a href="#knowledge" class="nav-link">更多知识</a>
+</div>
+
 
         <!-- 第三块：按钮预留区域 -->
         <div class="nav-button-area">
@@ -414,18 +416,17 @@
         box-sizing: border-box;
     }
     /* 导航栏容器：固定顶部 + 毛玻璃效果 */
-    .nav-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.7); /* 白色透明 */
-        backdrop-filter: blur(10px); /* 毛玻璃效果 */
-        -webkit-backdrop-filter: blur(10px); 
-        z-index: 999; 
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        transition: all 0.5s ease;
-    }
+   .nav-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.15);   /* 透明白磨砂 */
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
     .dark .nav-container {
         background-color: rgba(62, 60, 60, 0.7); /* 黑色透明 */
     }
