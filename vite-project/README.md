@@ -13,27 +13,26 @@
 ## 📁 项目结构概览
 project/
 ├── public/
-│ └── images/
+│   └── images/
 ├── src/
-│ ├── assets/
-│ │ └── fonts/
-│ ├── components/
-│ │ ├── Navbar.vue
-│ │ └── ThemeButton.vue
-│ ├── views/
-│ │ ├── Health.vue
-│ │ ├── Travel.vue
-│ │ ├── Cook.vue
-│ │ ├── Animal.vue
-│ │ └── article/
-│ ├── App.vue
-│ ├── main.js
-│ └── router.js
+│   ├── assets/
+│   │   └── fonts/
+│   ├── components/
+│   │   ├── Navbar.vue
+│   │   └── ThemeButton.vue
+│   ├── views/
+│   │   ├── Health.vue
+│   │   ├── Travel.vue
+│   │   ├── Cook.vue
+│   │   └── Animal.vue
+│   ├── article/
+│   ├── App.vue
+│   └── main.js
+├── router.js
 ├── index.html
 ├── style.css
 ├── package.json
 └── README.md
-
 ## 🚀 快速开始
 
 ### 环境准备
