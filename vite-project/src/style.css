@@ -1,55 +1,126 @@
+/* ==============================
+   全局样式文件 (style.css)
+   功能：定义应用的整体视觉风格和主题系统
+   ============================== */
+
+/* ==============================
+   1. 主题变量定义
+   ============================== */
+
+/**
+ * 明亮主题变量定义
+ * 应用于 [data-theme="light"] 元素及其子元素
+ */
 [data-theme="light"] {
-  --bg-color: #fdfbf7;
-  --text-color: #2c241b;
+  --bg-color: #fdfbf7;    /* 浅米色背景，更护眼 */
+  --text-color: #2c241b;  /* 深棕色文字，提高可读性 */
+  --card-bg: #f9f9f9;     /* 卡片背景色 */
+  --link-color: #646cff;  /* 链接颜色 */
+  --link-hover-color: #535bf2; /* 链接悬停颜色 */
 }
 
+/**
+ * 深色主题变量定义
+ * 应用于 [data-theme="dark"] 元素及其子元素
+ */
 [data-theme="dark"] {
-  --bg-color: #0f172a;
-  --text-color: #f0f0f0;
+  --bg-color: #0f172a;    /* 深蓝黑色背景 */
+  --text-color: #f0f0f0;  /* 浅灰色文字 */
+  --card-bg: #333333;     /* 深色卡片背景 */
+  --link-color: #646cff;  /* 链接颜色（保持与亮色一致） */
+  --link-hover-color: #535bf2; /* 链接悬停颜色 */
 }
 
+/* ==============================
+   2. 基础元素样式重置
+   ============================== */
 
-/* 应用变量到全局元素 */
-body {
-  transition: all 0.9s ease;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-
+/**
+ * 全局盒模型设置
+ * 确保所有元素使用 border-box 盒模型，便于尺寸计算
+ */
+* {
+  box-sizing: border-box;
   font-family: "MyFont", sans-serif;
-  font-size-adjust: 0.55;
-
-
 }
 
-/* 可根据需要调整其他元素（如卡片、按钮）的颜色 */
-.card {
-  background-color: var(--card-bg, #f9f9f9);
-}
-.dark .card {
-  --card-bg: #333;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+/**
+ * 页面主体样式
+ * 1. 应用主题变量
+ * 2. 设置平滑过渡动画
+ * 3. 定义基础布局
+ */
 body {
   margin: 0 auto;
+  padding: 0;
   display: flex;
+  flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
+  
+  /* 主题相关属性 */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.9s ease; /* 平滑的主题切换过渡 */
+  
+  /* 字体设置 */
+  font-family: "MyFont", sans-serif;
+  font-size-adjust: 0.55; /* 字体尺寸调整，提高可读性 */
+  line-height: 1.5; /* 增加行高，提高阅读体验 */
 }
 
+/* ==============================
+   3. 排版元素样式
+   ============================== */
+
+/**
+ * 标题样式
+ */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 0.5em;
 }
 
+h2, h3, h4, h5, h6 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/**
+ * 段落样式
+ */
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+  line-height: 1.6;
+}
+
+/* ==============================
+   4. 交互元素样式
+   ============================== */
+
+/**
+ * 链接样式
+ */
+a {
+  font-weight: 500;
+  color: var(--link-color, #646cff);
+  text-decoration: inherit;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color, #535bf2);
+  text-decoration: underline;
+}
+
+/**
+ * 按钮基础样式
+ */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -58,45 +129,126 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
+  color: #ffffff;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.25s ease;
 }
+
 button:hover {
-  border-color: #646cff;
+  border-color: var(--link-color, #646cff);
+  transform: translateY(-1px); /* 轻微上浮效果 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+  outline-offset: 2px;
 }
 
+/* ==============================
+   5. 组件样式
+   ============================== */
+
+/**
+ * 卡片组件基础样式
+ */
 .card {
   padding: 2em;
+  background-color: var(--card-bg, #f9f9f9);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/**
+ * 应用容器样式
+ */
 #app {
-  /* max-width: 1280px; */
-  margin: 0px auto;
+  margin: 0 auto;
+  padding: 0 20px;
   text-align: center;
+  width: 100%;
+  max-width: 1280px; /* 恢复最大宽度限制 */
+  flex: 1; /* 撑满可用空间 */
 }
 
+/* ==============================
+   6. 响应式设计
+   ============================== */
+
+/**
+ * 系统主题偏好适配
+ * 当用户系统设置为浅色模式时的默认样式
+ */
 @media (prefers-color-scheme: light) {
   :root {
     color: #3a6993;
     background-color: #ffffff;
   }
+  
   a:hover {
     color: #747bff;
   }
+  
   button {
     background-color: #f9f9f9;
+    color: #1a1a1a;
   }
 }
+
+/**
+ * 移动端适配
+ */
+@media (max-width: 768px) {
+  body {
+    font-size-adjust: 0.5; /* 移动端字体调整 */
+  }
+  
+  h1 {
+    font-size: 2.4em;
+  }
+  
+  .card {
+    padding: 1.5em;
+  }
+  
+  #app {
+    padding: 0 12px;
+  }
+}
+
+/**
+ * 小屏幕适配
+ */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+  }
+  
+  button {
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+  }
+}
+
+/* ==============================
+   7. 字体定义
+   ============================== */
+
+/**
+ * 自定义字体定义
+ * 注意：确保字体文件路径正确
+ */
 @font-face {
   font-family: "MyFont";
   src: url("/fonts/HanyiSentyTang.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-}
-* {
-  font-family: "MyFont", sans-serif;
+  font-display: swap; /* 优化字体加载体验 */
 }
