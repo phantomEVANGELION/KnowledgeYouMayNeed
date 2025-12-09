@@ -11,6 +11,7 @@
 - **全局主题与字体**：支持一键切换日间/夜间模式，并使用自定义字体。
 
 ## 📁 项目结构概览
+ ```bash
 project/
 ├── public/
 │   └── images/
@@ -33,6 +34,7 @@ project/
 ├── style.css
 ├── package.json
 └── README.md
+ ```
 ## 🚀 快速开始
 
 ### 环境准备
