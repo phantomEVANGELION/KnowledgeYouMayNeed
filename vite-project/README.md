@@ -1,0 +1,75 @@
+# Modern Knowledge Guide | 现代生活知识手册
+
+一个基于 Vue 3 + Vite 构建的现代知识类网站，提供健康、旅行、美食、动物等多个主题的分类浏览与文章阅读。
+
+## ✨ 核心功能
+
+- **主题分类首页**：展示健康、旅行、美食、动物等主题的文章列表。
+- **文章详情页**：针对阅读体验优化的页面（舒适排版、自动夜间模式适配）。
+- **全局导航栏**：固定导航，包含主题切换（亮色/暗色）和快速分类入口。
+- **响应式布局**：适配桌面端与移动端设备。
+- **全局主题与字体**：支持一键切换日间/夜间模式，并使用自定义字体。
+
+## 📁 项目结构概览
+ ```bash
+project/
+├── public/
+│   └── images/
+├── src/
+│   ├── assets/
+│   │   └── fonts/
+│   ├── components/
+│   │   ├── Navbar.vue
+│   │   └── ThemeButton.vue
+│   ├── views/
+│   │   ├── Health.vue
+│   │   ├── Travel.vue
+│   │   ├── Cook.vue
+│   │   └── Animal.vue
+│   ├── article/
+│   ├── App.vue
+│   └── main.js
+├── router.js
+├── index.html
+├── style.css
+├── package.json
+└── README.md
+ ```
+## 🚀 快速开始
+
+### 环境准备
+- **Node.js** (>= 18.x)
+- **包管理工具**：npm / pnpm / yarn (任选其一)
+
+### 运行项目
+1.  **克隆项目**
+    ```bash
+    git clone <你的仓库地址>
+    cd modern-knowledge-guide
+    ```
+
+2.  **安装依赖**
+    ```bash
+    npm install
+    ```
+
+3.  **启动开发服务器**
+    ```bash
+    npm run dev
+    ```
+    启动后，在浏览器中访问 **`http://localhost:5173`**。
+
+4.  **构建生产版本** (可选)
+    ```bash
+    npm run build
+    ```
+    构建产物将生成在 `dist/` 目录下。
+
+## 🎨 样式与主题
+
+- **全局字体**：在 `style.css` 中定义，自动应用于全站。
+- **夜间模式**：通过 `data-theme` 属性 (`light` / `dark`) 进行切换，CSS 变量提供样式支持。
+
+---
+
+**开发愉快！** 如有问题，请查阅项目代码或相关配置文件。
