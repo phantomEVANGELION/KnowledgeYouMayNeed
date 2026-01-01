@@ -79,6 +79,12 @@ const routes = [
   { path: '/article/health-1', component: Health1 },
   { path: '/article/health-2', component: Health2 },
   { path: '/article/health-3', component: Health3 },
+
+  //路径异常处理
+  {
+  path: '/:pathMatch(.*)*',
+  component: () => import('../views/NotFound.vue')}
+
 ];
 
 // ====================
@@ -93,5 +99,6 @@ const router = createRouter({
     return { top: 0 };
   },
 });
+
 
 export default router;

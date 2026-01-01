@@ -81,6 +81,18 @@ button:focus-visible {
   width: 100%;
 }
 
+/* =========================
+   字体引入
+   ========================= */
+@font-face {
+  font-family: "MyFont";
+  src: url("/fonts/HanyiSentyTang.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: "MyFont", sans-serif;
+}
 
 /* =========================
    系统浅色模式适配
@@ -99,4 +111,25 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+/* =========================
+   响应式适配,考虑在不同设备上的显示问题
+   ========================= */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2em;
+  }
+
+  .card {
+    padding: 1.2em;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
 }

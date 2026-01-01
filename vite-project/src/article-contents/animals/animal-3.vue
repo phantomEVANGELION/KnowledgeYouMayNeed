@@ -182,22 +182,39 @@
 
 <script setup>
     import ThemeButton from '../../components/ThemeButton.vue'
-    import { onMounted } from 'vue';
+   import { onMounted, onUnmounted, inject } from 'vue'
 
-    onMounted(() => {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            targetElement.scrollIntoView({
-            behavior: 'smooth'
-            });
-        }
-        });
-    });
-    });
+const theme = inject('theme')
+const toggleTheme = inject('toggleTheme')
+
+   onMounted(() => {
+  // 进入页面：强制深色
+  if (theme && theme.value !== 'dark' && toggleTheme) {
+    toggleTheme()
+  }
+  document.body.style.backgroundColor = '#050505';
+
+  // 平滑滚动
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault()
+      const targetId = this.getAttribute('href')
+      const targetElement = document.querySelector(targetId)
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' })
+      }
+    })
+  })
+})
+onUnmounted(() => {
+  // 1. 恢复全局 body 背景颜色（移除内联样式）
+  document.body.style.backgroundColor = '';
+
+  // 2. 检查当前主题，如果是深色，则切回浅色
+  if (theme && theme.value === 'dark' && toggleTheme) {
+    toggleTheme();
+  }
+})
 </script>
 
 <style scoped>
@@ -209,6 +226,7 @@
   margin: 0 auto;    /* 保持图片居中 */
   border-radius: 12px;
 }
+
 
 /* 图片下面的文字也顺便规范一下间距 */
 .img-caption {

@@ -76,7 +76,7 @@
         </ul>
         <h4 class="subchapter-title">贡多拉 vs. Traghetto：</h4>
         <p class="custom-paragraph">
-          贡多拉体验浪漫但昂贵（白天约€80/船，晚上更贵）。如果只是想体验一下贡多拉的摇曳，可以选择乘坐 **Traghetto**。它是由两名船夫操作的公共贡多拉，用于短距离横渡大运河，每次只需€2左右，是本地人的日常交通方式。
+          贡多拉体验浪漫但昂贵（白天约€80/船）。如果只是想体验一下贡多拉的摇曳，可以选择乘坐 Traghetto。它是由两名船夫操作的公共贡多拉，用于短距离横渡大运河，每次只需€2左右，是本地人的日常交通方式。
         </p>
       </div>
     </section>
@@ -129,7 +129,7 @@ onMounted(() => {
 .explore-btn { padding: 10px 25px; background: #b71c1c; color: white; text-decoration: none; border-radius: 4px; margin-top: 20px; display: inline-block;}
 
 .desk { background: #e0f7fa; padding: 50px 20px; text-align: center; }
-.section-home-title { color: #006064; font-size: 2rem; margin-bottom: 40px; font-family: serif;}
+.section-home-title { color: #006064; font-size: 2rem; margin-bottom: 40px; }
 .card-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
 .flip-card { width: 240px; height: 300px; perspective: 1000px; cursor: pointer; }
 .flip-card-inner { width: 100%; height: 100%; transition: transform 0.8s; transform-style: preserve-3d; position: relative; box-shadow: 5px 5px 15px rgba(0,0,0,0.2); border-radius: 4px;}

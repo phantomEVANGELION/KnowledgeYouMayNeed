@@ -21,7 +21,8 @@
     <div id="home" class="hero-section">
    
         <div class="hero-text">
-            <h1>稳住血压，守护健康</h1>
+            <h1>稳住血压</h1>
+            <h2>守护健康</h2>
             <p>高血压被称为“无声的杀手”。科学地生活，是中老年人长寿安康的关键。让关爱从每一顿饭、每一步路开始。</p >
             <a href="#diet" class="explore-btn">阅读指南</a>
         </div>
@@ -191,6 +192,7 @@ body { margin: 0; padding: 0; box-sizing: border-box; }
     max-width: 500px; color: #0d47a1;
 }
 .hero-text h1 { font-size: 3rem; margin-bottom: 1rem; color: #0d47a1; }
+.hero-text h2 { font-size: 3rem; margin-bottom: 1rem; color: #0d47a1; }
 .hero-text p { font-size: 1.2rem; line-height: 1.6; color: #37474f; margin-bottom: 2rem;}
 
 .explore-btn {

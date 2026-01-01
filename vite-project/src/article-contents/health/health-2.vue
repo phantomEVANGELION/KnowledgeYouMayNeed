@@ -101,8 +101,8 @@
 <script setup>
 import ThemeButton from '../../components/ThemeButton.vue'
 import { onMounted } from 'vue';
-const title = '冬季养生：提高免疫力的5个方法';
-const description = '冬季气温低，容易感冒，专家分享5个提高免疫力的实用方法，帮助平安过冬。';
+const title = '冬季养生：提高免疫力的方法';
+const description = '冬季气温低，容易感冒，专家分享一些提高免疫力的实用方法，帮助平安过冬。';
 onMounted(() => {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
