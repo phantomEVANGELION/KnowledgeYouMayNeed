@@ -4,7 +4,7 @@
        特性：包含导航栏、路由视图和主题切换逻辑 -->
   <div id="app-wrapper">
     <!-- 顶部导航栏 -->
-    <Navbar />
+    <NavBar />
     
     <!-- 路由视图容器：根据路由显示不同页面 -->
     <router-view />
@@ -16,7 +16,7 @@
 // 全局应用配置和状态管理
 // ==============================
 
-import Navbar from './components/Navbar.vue';
+import NavBar from './components/NavBar.vue';
 import { ref, provide, onMounted } from 'vue';
 
 /**
